@@ -1,0 +1,51 @@
+(101)	0000	
+(102)	0001	01110000	
+(103)	0011	01110001	
+(104)	0010	01110100	
+(105)	0001	01110010	
+(106)	1010	01101010	
+(107)	0011	01110011	
+(108)	1010	01110100	
+(109)	0011	01101101	
+(110)	1011	01101110	
+(111)	0101	
+(112)	1101	00000100	
+(113)	1101	00000101	
+(114)	1101	00000101	
+(115)	1101	00000100	
+(116)	1101	00000000	
+---------------------------------------------------------------------
+GENERATING SYMBOL TABLE
+Index	Name	Address	Label or Var
+0	I	112	variable- 4
+1	Add	103	label
+2	J	113	variable- 5
+3	INTER	116	variable- 0
+4	K	114	variable- 5
+5	L	115	variable- 4
+---------------------------------------------------------------------
+GENERATING LITERAL TABLE
+Index	Name	Address	
+0	=2	106
+1	=1	109
+2	=5	110
+---------------------------------------------------------------------
+GENERATING OPCODE TABLE
+Index	Opcode	Binary	OperandType	Address	INSTR. LENGTH
+0	CLA	0000	-		101	12 bits
+1	LAC	0001	Reg		102	12 bits
+2	ADD	0011	Reg		103	12 bits
+3	SAC	0010	Reg		104	12 bits
+4	LAC	0001	Reg		105	12 bits
+5	MUL	1010	Immed		106	12 bits
+6	ADD	0011	Reg		107	12 bits
+7	MUL	1010	Reg		108	12 bits
+8	ADD	0011	Immed		109	12 bits
+9	DIV	1011	Immed		110	12 bits
+10	BRZ	0101	null		111	12 bits
+11	DC	1101	Reg		112	12 bits
+12	DC	1101	Reg		113	12 bits
+13	DC	1101	Reg		114	12 bits
+14	DC	1101	Reg		115	12 bits
+15	DC	1101	Reg		116	12 bits
+16	STP	1100	-		117	12 bits
