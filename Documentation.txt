@@ -1,0 +1,55 @@
+#Assembler project
+################################				AKASH SHARMA - 2017327
+################################				TANYA KAPUR - 2017366
+
+We have designed an assembler which will take an assembly code as input (in input.txt), and will output 
+the machine code (in output.txt), in seperate text files. The assembler also forms an intermediate code and converts it into machine code with the help of symbol & literal tables as well as an intermediate code like the real world assembler.
+
+INPUT FORMAT: 
+We have assumed this format for the assembly language program.
+Label/symbol  |  Opcode  |  Operands |   Comments
+Each column is seperated by tab(\t).
+Normal strings are used for defining symbols.
+Opcodes are used in accordance to the given material. (With an additional use of "DC" which is defined as <Symbol> DC <Value>)
+Comments start from introducing a "/" and will go on till the end of line.
+
+OUTPUT FORMAT:
+The format is as follows:
+LineNumber	|   opcode  |  operand
+It also includes the symbol table, literal table and the pseudo-opcode table.
+
+The program must start with a "START" statement and a starting address. The same program ends with "STP" command only.
+
+PASS-1
+We have given addresses to the symbols which consists of labels and variables (and stored them in symbol table). All of these addresses are converted to binary in the machine code. The labels are given immediate addressing and the variables are given addresses of where they are declared.
+We have also given the same treatment to the literals in the literal table and given immediate addressing.
+
+PASS-2
+With the help of these tables and an intermediate code , we iterated through this code and produced the machine language code.
+And also printed the tables formed in pass 1 which
+
+Assumptions:
+1.One Accumulator System
+2.Literals are replaced by the address of the literals in machine code.
+3."DC" is considered as a operation with opcode as 13.
+4.The user should follow the input format
+5.The output of the file consists of line numbers just for clarity and is not a part in 12 bit word 
+6.The program stops on encountering "STP" opcode.
+7.Comments start from "/" and end till next line starts.
+
+Errors Handling:
+Many errors were handled including invalid labels, symbols , literals etc. But more are yet to be covered.
+1)Invalid Opcodes handled
+2)Repeat use of any labels
+3)Undeclared Symbols(variables)
+4)Correct operand format for respective opcodes-Opcode is supplied with too many operands or is supplied with less number of operands than required
+5)Start and stop of the program not written properly
+6) Not following the input file format including comments
+7)Invalid Literals as operands
+9)Symbols defined more than once.
+10)OPcodes used as symbols.
+11)Branch statements can only take labels as operand. 
+12)Other respective opcodes will get variable symbols as operands and not labels.
+13)A symbol with same name for variable and label.
+
+
