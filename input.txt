@@ -1,0 +1,18 @@
+START	100	
+	CLA		//clear accumulator
+	LAC	I	//bring into accumulator
+Add	ADD	J	//add
+	SAC	INTER	//save
+	LAC	K
+	MUL	=2	
+	ADD	L	
+	MUL	INTER
+	ADD	=1
+	DIV	=5	//divide by 5
+	BRZ	Add
+I	DC	4
+J	DC	5
+K	DC	5
+L	DC	4
+INTER	DC	0
+	STP		//stop
